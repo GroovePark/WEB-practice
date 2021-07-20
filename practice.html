@@ -3,9 +3,40 @@
     <head>
         <title>강아지에 대한 고찰</title>
         <meta charset="utf-8">
+        <style>
+            ol{
+                border:5px solid red;
+                padding-left:30px;
+                }
+             ul{
+                border:5px solid red;
+             }
+            a {
+                color:red;
+                border:5px solid black;
+                display:inline;
+                }
+            h1 {
+                font-size : x-large;
+                }
+            #grid{
+                display:grid;
+                grid-template-columns : 1fr 1fr;
+                }
+        </style>
     </head>
     <body>
-        <h1>강아지에 대한 고찰</h1>
+    <div>
+        <input type = "button" value = "야간모드" onclick="document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#mode').value='현재 야간모드입니다'";>
+        <input type = "button" value = "주간모드" onclick="document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#mode').value='현재 주간모드입니다'";>
+        <input type = "text" id ="mode" value = "현재 주간모드입니다" disabled>
+
+    </div>
+        <h1><a>강아지에 대한 고찰</a></h1>
         <p style="margin-bottom:10px">i like <strong>dog</strong>
         </p>
 
@@ -14,21 +45,24 @@
         <img src = "dog.PNG" width = 10%>
         </p>
 
-        <h1>순한견종이름</h1>
-        <ol>
-            <li>포메라니안</li>
-            <li>푸들</li>
-            <li>말티즈</li>
-            <li>시바견</li>
-        </ol>
-
-        <h1>사나운견종이름</h1>
-        <ul>
-            <li>1. 불독</li>
-            <li>2. 도사견</li>
-            <li>3. 핏불테리어</li>
-            <li>4. 진돗개</li>
-        </ul>
+        <div id = "grid">
+            <ol>
+             <h1>순한견종이름</h1>
+                <li>포메라니안</li>
+                <li>푸들</li>
+                <li>말티즈</li>
+                <li>시바견</li>
+            </ol>
+            <div>
+            <ul>
+            <h1>사나운견종이름</h1>
+                <li>1. 불독</li>
+                <li>2. 도사견</li>
+                <li>3. 핏불테리어</li>
+                <li>4. 진돗개</li>
+            </ul>
+            </div>
+        </div>
         <a href = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EA%B0%95%EC%95%84%EC%A7%80"
           target = "_blank" title = "ㅇㄹㄷㄻㅇㄹ"> 강아지 검색결과</a>
     </body>
